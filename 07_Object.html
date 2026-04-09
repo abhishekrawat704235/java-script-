@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>object</title>
+  </head>
+  <body>
+    <script>
+      //object is a collection of properties and methods
+      //object is a data type that can store multiple values in a single variable
+      //object is a reference type
+      //object is a mutable data type
+      //object is a key-value pair
+      //object is a non-primitive data type
+
+      //     const person ={
+      //         name:`abhishek`,
+      //         age : 25,
+      //         city : `delhi`,
+
+      //     }
+      //     console.log(person);
+
+      // console.log(person.name); //dot notation
+
+      // console.log(person[`age`]); //bracket notation
+
+      // person.name="riku"; //update the value of name property
+      // console.log(person);
+
+      // person.country = `india`; //add a new property to the object
+      // console.log(person);
+
+      // delete person.city; //delete a property from the object
+      // console.log(person);
+
+      //bracket notation se use isliye karte hai jab hume property name ko dynamically access karna hota hai ya phir property name me space hota hai ya phir property name me special characters hote hai to hum bracket notation ka use karte hai.
+      //const product = {
+      //   name: `laptop`,
+      //  "delivery-time": `10:00 AM`,
+      // };
+      //console.log(product);
+      // console.log(product.delivery-time); //error because of the hyphen in the property name dot notation se access nahi kar sakte hai kyon ki yah yah mathematical operator ke roop me treat karega isliye error aayega
+      //console.log(product[`delivery-time`]); //bracket notation se access kar sakte hai
+
+      //inside an object we can save any type of value like string, number, boolean, array, object, function etc.
+
+      const product3 = {
+        name: `phone `,
+        price: 10000,
+        available: true,
+        colors: [`red`, `blue`, `green`],
+
+        specifications: {
+          weight: `1 kg`,
+          dimensions: `10x10x10 cm`,
+        },
+
+        abhi: function ABHISHEK() {
+          console.log(
+            `this is a method inside an object funstion is a property of an object that can be called to perform a specific task`,
+          );
+        },
+      };
+      //   console.log(product3.specifications); //accessing nested object property
+      //   console.log(product3.colors[1]); //accessing array element inside object
+      //   console.log(product3.available); //accessing boolean property inside object
+      //   product3.abhi(); //accessing method inside object
+      //you know about the console is a global object in JavaScript and console.log() is a function that is a method of the console object that is used to print the output to the console.
+      //   console.log(typeof console); //object
+      //   console.log(typeof console.log); //function
+
+      //built-in objects yah JavaScript me pehle se hi defined objects hote hai jise hum use kar sakte hai jaise ki Math, Date, String, Array, Object etc.
+
+      //   1. Math object: Math object me mathematical constants aur functions hote hai jaise ki Math.PI, Math.sqrt(), Math.pow() etc.
+      //   2. Date object: Date object me date aur time se related properties aur methods hote hai jaise ki Date.now(), Date.getFullYear(), Date.getMonth() etc.
+      //     3. String object: String object me string se related properties aur methods hote hai jaise ki String.length, String.toUpperCase(), String.toLowerCase() etc.
+      //     4. Array object: Array object me array se related properties aur methods hote hai jaise ki Array.length, Array.push(), Array.pop() etc.
+      //     5. Object object: Object object me object se related properties aur methods hote hai jaise ki Object.keys(), Object.values(), Object.entries() etc.
+      //     6. JSON object: JSON object me JSON se related properties aur methods hote hai jaise ki JSON.parse(), JSON.stringify() etc.
+
+      // how to convert javaScript object to JSON string and JSON string to JavaScript object
+      // JSON.stringify() method is used to convert JavaScript object to JSON string
+
+      console.log(JSON.stringify(product3)); //convert JavaScript object to JSON string
+      // JSON.parse() method is used to convert JSON string to JavaScript object
+      const jsonstring = JSON.stringify(product3); //store the JSON string in a variable
+      console.log(JSON.parse(jsonstring));
+
+      //8.localStorage me data store karne ke liye hume data ko JSON string me convert karna padta hai kyunki localStorage me sirf string hi store hota hai isliye hume data ko JSON string me convert karna padta hai aur jab hume data ko localStorage se retrieve karna hota hai to hume data ko JSON string se JavaScript object me convert karna padta hai.
+      // in short, localstorage is the web storage API that allows us to store data in the browser and it only stores data in string format so we need to convert our data to JSON string before storing it in localStorage and we need to convert it back to JavaScript object when we retrieve it from localStorage.
+    </script>
+  </body>
+</html>
